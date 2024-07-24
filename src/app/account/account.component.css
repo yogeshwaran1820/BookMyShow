@@ -1,0 +1,161 @@
+.content{
+    width: 100%;
+    border-bottom: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.content img{
+    height: 30px;
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+}
+.content input{
+    width: 400px;
+    padding: 6px;
+    margin: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.534);
+    border-radius: 6px;
+    outline: none;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-input {
+  max-width: 100%;
+  width: 300px;
+}
+
+mat-icon{
+    position: relative;
+    left: 40px;
+    top: 9px;
+    font-size: 20px;
+    color: gray;
+}
+.content input::placeholder{
+    font-size: 12px;
+}
+.content input[type='text']{
+  padding-left: 40px;
+}
+.content2 .menubtn{
+  margin: 10px 10px 0 0;
+  font-size: 24px;
+}
+.content3{
+    display: flex;
+    border: 1px solid  rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245);
+    padding-left: 39px;
+}
+.content3 p{
+    margin-left: 20PX;
+    font-size: 13px;
+    padding-top: 10px;
+    color: rgba(0, 0, 0, 0.795);
+}
+.content3 p:hover{
+    cursor: pointer;
+}
+.container2{
+    height: 85.3vh;
+    background-color: rgba(34, 34, 34, 0.8);
+    /* margin-top: -10px; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.container2 button{
+    width: 140px;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.247);
+    border-radius: 8px;
+}.container2 button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+/* .content4{
+    height: 40vh;
+    background-color: white;
+    position: absolute;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+} */
+.content4 h1{
+    text-align: center;
+    font-weight: bolder;
+}
+.content4{
+    height: 60vh;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.content4 h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+.content4 table tr td{
+    font-size: 16px;
+    padding: 10px;
+}
+.content4 .btn1{
+    margin-top: 60px;
+}
+.content5 h1{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.content5{
+    display: inline-block;
+    padding:20px;
+    text-align: center;
+    margin-top: -20px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+.content5 span{
+    color: red;
+    font-size: 9px;
+}
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input{
+    /* color: white !important;  */
+}
+.content5 input::placeholder{
+    font-size: 13px;
+    /* color: rgba(255, 255, 255, 0.856); */
+}
+.content5 input{
+}
+mat-form-field{
+    border-radius: 10px;
+    width: 300px;
+    color: black;
+    margin-bottom: -10px;
+}
+.content5 input::placeholder{
+    /* color: rgba(245, 222, 179, 0.555); */
+}
+.content5 mat-label{
+    font-size:14px;
+    /* color: wheat; */
+}

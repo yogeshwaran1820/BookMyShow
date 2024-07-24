@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="content">
+        <div class="logo">
+            <img src="https://asset.brandfetch.io/id4J58sqa_/idkMZrL-P_.png" alt="logo">
+        </div>
+        <div class="content2">
+            <button class="menubtn" mat-button [matMenuTriggerFor]="menu">☰</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>Account</button>
+            <button mat-menu-item [routerLink]="['']">Logout</button>
+            </mat-menu>
+            
+        </div>
+    </div>
+    <div class="content3">
+        <p (click)="movies()">Movies</p>
+        <p (click)="sports()">Sports</p>
+    </div>
+
+    <div class="container2">
+        <div class="content4" *ngIf="!changepass">
+            <h1>Account Details</h1>
+            <div *ngFor= "let x of details">
+                <table>
+                    <tr>
+                        <td>UserName </td>
+                        <td>:</td>
+                        <td>{{x.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone No </td>
+                        <td>:</td>
+                        <td>{{x.phn}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email </td>
+                        <td>:</td>
+                        <td>{{x.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Password </td>
+                        <td>:</td>
+                        <td>********</td>
+                    </tr>
+                </table>
+                <!-- <p>UserName : {{x.name}}</p>
+                <p>Phone No : {{x.phn}}</p>
+                <p>Email : {{x.email}}</p>
+                <p>Password : ********</p> -->
+            </div>
+            <button class="btn1" (click)="back()">Back</button>
+            <!-- <mat-spinner></mat-spinner> -->
+            <button class="btn1" (click)="change()">Change Password</button>
+        </div>
+        <div class="content4" *ngIf="changepass">
+            <form class="content5" [formGroup]="myForm">
+                <h1>Password Reset</h1>
+                <p>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Old Password</mat-label>
+                      <input type="text" matInput placeholder="Old password" formControlName="oldpass">
+                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    </mat-form-field><br>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                      <mat-label>New Password</mat-label>
+                      <input type="text" matInput placeholder="New password" formControlName="newpass">
+                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    </mat-form-field><br>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Re-enter Password</mat-label>
+                      <input type="text" matInput placeholder="Re-enter password" formControlName="repass">
+                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    </mat-form-field><br>
+                </p>
+                <button (click)="backAcc()">Back</button>
+                <!-- <mat-spinner></mat-spinner> -->
+                <button (click)="passwordCheck()">Change Password</button>
+            </form>
+        </div>
+    </div>
+</div>

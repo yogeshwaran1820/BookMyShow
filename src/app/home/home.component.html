@@ -1,0 +1,123 @@
+<div class="container">
+    <div class="content">
+        <div class="logo">
+            <img src="https://asset.brandfetch.io/id4J58sqa_/idkMZrL-P_.png" alt="logo">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon> 
+            <!-- <input type="text" (input)="fun()" [(ngModel)]="myInput" placeholder="Search for Movies, Events, Plays, Sports and Activities"> -->
+                <input type="text"
+                    placeholder="Search for a street"
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto"
+                    class="example-input">
+                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option.title" (click)="suggestion(option)">
+                        {{ option.title }}
+                    </mat-option>
+                    </mat-autocomplete>
+              
+        </div>
+        <div class="content2">
+            <button class="menubtn" mat-button [matMenuTriggerFor]="menu">☰</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['account']">Account</button>
+            <button mat-menu-item [routerLink]="['']">Logout</button>
+            </mat-menu>
+            <!-- <div class="menu">
+                <button mat-flat-button></button>
+            </div> -->
+            
+        </div>
+    </div>  
+    
+    <div class="content3">
+        <p (click)="movies()">Movies</p>
+        <p (click)="sports()">Sports</p>
+    </div>
+    <div *ngIf="movieViewDetails1">
+        <div class="slider" *ngIf="show">
+            <div class="slides" [ngStyle]="{ 'transform': 'translateX(' + currentSlideIndex * -100 + '%)' }">
+              <div class="slide" *ngFor="let image of images">
+                <img [src]="image.url" [alt]="image.alt">
+              </div>
+            </div>
+            <button class="nav-button left" (click)="prevSlide()">&#10094;</button>
+            <button class="nav-button right" (click)="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    
+        
+    <div class="ex" *ngIf="!myCondition">
+        <div class="content4" *ngIf="!myCondition2">
+            <div class="rm">
+                <h6>Recommended Movies</h6>
+                <p (click)="seeall()">See All</p> 
+            </div>
+            <div class="flexclass">
+                <div class="cards" *ngFor="let image of movieImages">
+                    <div class="card">
+                        <img src ={{image.url}} alt="image.alt" (click)="movieView(image.title)">
+                        <p class="p1">{{image.title}}</p>
+                        <p class="p2">{{image.title2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+         <!-- <router-outlet></router-outlet> -->
+         <!-- <app-cards></app-cards> -->
+         <app-allcard *ngIf="myCondition" (imageData)="selectedImageData($event)"  ></app-allcard>
+         <!-- <app-footer></app-footer> -->
+         <app-sports *ngIf="myCondition2"></app-sports>
+
+    
+
+     <div class="container3" *ngIf="movieViewDetails2">
+     </div>
+
+        <div *ngIf="movieViewDetails2">
+            <div class="container4" *ngFor="let x of selectedmovie">
+                <div class="newtap">
+                    <img src={{x.img}} alt="your are offline">
+                </div>
+                <div class="newtap2">
+                    <div class="text1">
+                        <h1>{{x.movieName}}</h1>
+                        <p class="p1"><span>★</span>{{x.rate}}<button>Rate Now</button></p>
+                        <p class="p2">{{x.rate2}}</p>
+                        <p class="p2">{{x.lang}}</p>
+                        <p class="p2">{{x.rate3}}</p>
+                        <button class="btn">Book Tickets</button>
+                    </div>
+                    <div class="text2">
+                        <button><span>➤</span> Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <div class="container3" *ngIf="movieViewDetails3">
+     </div>
+
+        <div *ngIf="movieViewDetails3">
+            <div class="container4" *ngFor="let x of selectedmovie2">
+                <div class="newtap">
+                    <img src={{x.url}} alt="your are offline">
+                </div>
+                <div class="newtap2">
+                    <div class="text1">
+                        <h1>{{x.title}}</h1>
+                        <p class="p1"><span>★</span> 8.7/10 (638.4K Votes) <button>Rate Now</button></p>
+                        <p class="p2">2D, IMAX 2D, 3D, IMAX 3D</p>
+                        <p class="p2">{{x.lang}}  {{x.title2}}</p>
+                        <p class="p2">3h 1m • Action, Sci-Fi, Thriller • UA • 27 Jun, 2024</p>
+                        <button class="btn">Book Tickets</button>
+                    </div>
+                    <div class="text2">
+                        <button><span>➤</span> Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<app-footer></app-footer>

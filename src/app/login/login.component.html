@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="logo">
+      <!-- <img src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png" alt="logo"> -->
+      
+  </div>
+  <form class="content" [formGroup]="myForm">
+      <h4>Login</h4>
+      <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput placeholder="Example@gmail.com" formControlName="email">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          </mat-form-field><br>
+          <span  class="error" *ngIf="myForm.controls['email'].errors?.['email']">Invalid email</span>
+      </p>
+      <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="pass">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          </mat-form-field><br>
+          <span class="error" *ngIf="myForm.controls['pass'].errors?.['pattern']">must be 8 characters</span>
+      </p>
+        <button mat-flat-button (click)="submit()"  [disabled]="diss()">Submit</button>
+        <p class="account">
+          don't have account ?  <span [routerLink]="['signin']">Create Account</span>
+        </p>
+    </form>    
+</div>

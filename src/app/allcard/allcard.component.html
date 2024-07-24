@@ -1,0 +1,44 @@
+<!-- <app-home></app-home> -->
+<div class="container">
+        <div class="content">
+            <div class="filter">
+                <p class="fi">Filters</p>
+                <div class="buttons">
+                    <div class="one">
+                        <p><span class="lang" [ngClass]="{'rotate':isRotate}" (click)="hide()">﹀</span>Languages</p>
+                        <span class="clear" (click)="clear()">Clear</span>    
+                    </div>
+                    <div *ngIf="value">
+                        <div class="two" *ngFor="let x of buttons">
+                            <button (click)="langButton($event)">{{x.btn}}</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="content2">
+            <h6>Movies in Mumbai</h6>
+            <div class="flexclass" *ngIf="filterImage">
+                <div class="cards" *ngFor="let image of movieAllImage">
+                    <div class="card">
+                        <img src ={{image.url}} alt="image.alt" (click)="movieView(image.title)">
+                        <p class="p1">{{image.title}}</p>
+                        <p class="p2">{{image.title2}}</p>
+                        <p class="p2">{{image.lang}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexclass" *ngIf="!filterImage">
+                <div class="cards" *ngFor="let image of filterMovies">
+                    <div class="card">
+                        <img src ={{image.url}} alt="image.alt" (click)="movieView(image.title)">
+                        <p class="p1">{{image.title}}</p>
+                        <p class="p2">{{image.title2}}</p>
+                        <p class="p2">{{image.lang}}</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+</div>

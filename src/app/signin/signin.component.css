@@ -1,0 +1,59 @@
+.container{
+    height: 100vh;
+    text-align: center;
+    background-image: url('https://cdn.prod.website-files.com/5a9ee6416e90d20001b20038/64f5ce8810cb604f097aed34_Rectangle%20(20).svg');
+    filter: brightness(100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.content h1{
+    color: rgba(255, 255, 255, 0.856);
+    font-size: 24px;
+}
+.content{
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: inline-block;
+    padding:20px;
+    text-align: center;
+    margin-top: 4%;
+    border-radius: 20px;
+    }
+.content span{
+    color: red;
+    font-size: 9px;
+}
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input{
+    color: white !important; 
+}
+.content input::placeholder{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.856);
+}
+mat-form-field{
+    border-radius: 10px;
+    width: 300px;
+    color: black;
+}
+.content input::placeholder{
+    color: rgba(245, 222, 179, 0.555);
+}
+.content mat-label{
+    font-size:14px;
+    color: wheat;
+}
+.err p{
+    display: inline-block;
+}
+.account{
+    font-size: 12px;
+    margin-right: -20px;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.account span{
+    font-size: 12px;
+    cursor: pointer;
+}

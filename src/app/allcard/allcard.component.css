@@ -1,0 +1,127 @@
+.container{
+    background-color: rgb(245, 245, 245);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 30px;
+}
+.content .fi{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.801);
+}
+.content p{
+    position: relative;
+    left: -20px;
+    padding-top: 6px;
+}
+.filter .buttons{
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    width: 290px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    border: none;
+    color: rgb(233, 68, 68);
+}
+.filter .buttons .one{
+    display: flex;
+    justify-content: space-between;
+}
+.filter p{
+    padding-left: 36px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.filter .lang{
+    position: relative;
+    top: 4px;
+    right: 8px;
+    color: rgb(48, 46, 46);
+    font-weight: bold;
+}
+.filter .clear{
+    position: relative;
+    top:10px;
+    cursor: pointer;
+    color: rgba(128, 128, 128, 0.863);
+}
+.filter .buttons .two{
+    display: inline-block;
+    padding: 10px;
+}
+.filter .buttons .two button{
+    color: rgb(233, 68, 68);
+    background-color: transparent;
+    padding: 8px 11px 8px 11px;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, 0.534);
+}
+
+.rotate{
+    transform: rotate(45deg);
+}
+
+.content2 button{
+    border-radius: 24px;
+    border: 1px solid gray;
+    color: rgba(255, 0, 0, 0.747);
+    background: #0000;
+    padding: 8px;
+    font-size: 11px;
+    margin-left: 10px;
+    margin-top: 14px;
+}
+button{
+    cursor: pointer;
+}
+.flexclass{
+    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    column-gap: 14px;
+    /* margin-top: -250px; */
+}
+.content2 h6{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+    height: 40px    ;
+}
+.cards{
+    /* width: 50%; */
+  }
+.cards{
+}
+.card{
+    margin-top: 30px;
+    width: 200px;
+    margin-right: 20px;
+}
+.card:hover{
+    cursor: pointer;
+  }
+  
+  .card img{
+    height: 340px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .card .p1{
+    margin-top: 6px;
+    font-weight: 499;
+  }
+  .card .p2{
+    color: gray;
+    margin-top: -6px;
+    font-size: 13px;
+  }
+  

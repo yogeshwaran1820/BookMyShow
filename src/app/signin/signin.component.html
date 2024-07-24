@@ -1,0 +1,42 @@
+<div class="container">
+    
+    <form class="content" [formGroup]="myForm">
+        <h1>Sign-in</h1>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input type="text" matInput placeholder="User name" formControlName="name">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            </mat-form-field><br>
+            <span class="error" *ngIf="myForm.controls['name'].errors?.['pattern']">cannot be empty !!!</span>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Phn</mat-label>
+              <input type="text" matInput placeholder="Phn No" formControlName="phn" required maxlength="12">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            </mat-form-field><br>
+            <span class="error" *ngIf="myForm.controls['phn'].errors?.['minlength'] || myForm.controls['phn'].errors?.['maxlength']">Inter valid number</span>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input type="text" matInput placeholder="Example@gmail.com" formControlName="email">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            </mat-form-field><br>
+            <span  class="error" *ngIf="myForm.controls['email'].errors?.['email']">Invalid email</span>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput formControlName="pass">
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            </mat-form-field><br>
+            <span class="error" *ngIf="myForm.controls['pass'].errors?.['pattern']">must be 8 characters</span>
+        </p>
+          <button mat-flat-button (click)="submit()" [routerLink]="['']"  [disabled]="diss()">Submit</button>
+          <p class="account">
+            Alread you a have account ?  <span [routerLink]="['']">Login here</span>
+          </p>
+      </form>    
+</div>
